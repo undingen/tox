@@ -4,7 +4,7 @@ tox installation
 Install info in a nutshell
 ----------------------------------
 
-**Pythons**: CPython 2.7 and 3.5 or later, Jython-2.5.1, pypy-1.9ff
+**Pythons**: CPython 2.7 and 3.5 or later, Jython-2.5.1, pypy-1.9ff, pyston-2.3.1
 
 **Operating systems**: Linux, Windows, OSX, Unix
 

@@ -53,7 +53,9 @@ class PythonSpec(object):
         if os.path.isabs(base_python):
             path = base_python
         else:
-            match = re.match(r"(python|pypy|jython)(\d)?(?:\.(\d+))?(?:-(32|64))?$", base_python)
+            match = re.match(
+                r"(python|pypy|jython|pyston)(\d)?(?:\.(\d+))?(?:-(32|64))?$", base_python
+            )
             if match:
                 groups = match.groups()
                 name = groups[0]
@@ -68,7 +70,11 @@ class PythonSpec(object):
 
 
 CURRENT = PythonSpec(
-    "pypy" if tox.constants.INFO.IS_PYPY else "python",
+    "pypy"
+    if tox.constants.INFO.IS_PYPY
+    else "pyston"
+    if tox.constants.INFO.IS_PYSTON
+    else "python",
     sys.version_info[0],
     sys.version_info[1],
     64 if sys.maxsize > 2 ** 32 else 32,

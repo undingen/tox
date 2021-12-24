@@ -45,6 +45,7 @@ Tox currently understands the following patterns:
     py: The current Python version tox is using
     pypy: Whatever available PyPy there is
     jython: Whatever available Jython there is
+    pyston: Whatever available Pyston there is
     pyN: Python of version N. for example py2 or py3 ... etc
     pyNM: Python of version N.M. for example py27 or py38 ... etc
     pypyN: PyPy of version N. for example pypy2 or pypy3 ... etc

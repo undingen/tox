@@ -10,10 +10,10 @@ _THIS_FILE = os.path.realpath(os.path.abspath(__file__))
 
 
 class PYTHON:
-    PY_FACTORS_RE = re.compile("^(?!py$)(py|pypy|jython)([2-9][0-9]?[0-9]?)?$")
+    PY_FACTORS_RE = re.compile("^(?!py$)(py|pypy|jython|pyston)([2-9][0-9]?[0-9]?)?$")
     CURRENT_RELEASE_ENV = "py37"
     """Should hold currently released py -> for easy updating"""
-    QUICKSTART_PY_ENVS = ["py27", "py35", "py36", CURRENT_RELEASE_ENV, "pypy", "jython"]
+    QUICKSTART_PY_ENVS = ["py27", "py35", "py36", CURRENT_RELEASE_ENV, "pypy", "jython", "pyston"]
     """For choices in tox-quickstart"""
 
 
@@ -22,6 +22,7 @@ class INFO:
     CONFIG_CANDIDATES = ("pyproject.toml", "tox.ini", "setup.cfg")
     IS_WIN = sys.platform == "win32"
     IS_PYPY = hasattr(sys, "pypy_version_info")
+    IS_PYSTON = hasattr(sys, "pyston_version_info")
 
 
 class PIP:

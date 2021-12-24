@@ -1452,7 +1452,7 @@ class TestConfigTestEnv:
         envconfig = config.envconfigs["python"]
         assert envconfig.envpython == envconfig.envbindir.join("python")
 
-    @pytest.mark.parametrize("bp", ["jython", "pypy", "pypy3"])
+    @pytest.mark.parametrize("bp", ["jython", "pypy", "pypy3", "pyston"])
     def test_envbindir_jython(self, newconfig, bp):
         config = newconfig(
             """

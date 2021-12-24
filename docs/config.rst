@@ -222,6 +222,8 @@ various versions and implementations of Python and provide default values for
 - ``pypy``: configures ``basepython = pypy``
 - ``jythonN``: configures ``basepython = jythonN``
 - ``jython``: configures ``basepython = jython``
+- ``pystonN``: configures ``basepython = pystonN``
+- ``pyston``: configures ``basepython = pyston``
 
 It is also possible to define what's know as *generative names*, where an
 individual section maps to multiple environments. For example,

@@ -156,8 +156,8 @@ basepython defaults, overriding
 +++++++++++++++++++++++++++++++
 
 For any ``pyXY`` test environment name the underlying ``pythonX.Y`` executable
-will be searched in your system ``PATH``. Similarly, for ``jython`` and
-``pypy`` the respective ``jython`` and ``pypy-c`` names will be looked for.
+will be searched in your system ``PATH``. Similarly, for ``jython``,
+``pypy`` and ``pyston`` the respective ``jython``, ``pypy-c`` and ``pyston`` names will be looked for.
 The executable must exist in order to successfully create *virtualenv*
 environments. On Windows a ``pythonX.Y`` named executable will be searched in
 typical default locations using the ``C:\PythonXY\python.exe`` pattern.
